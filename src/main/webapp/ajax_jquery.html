@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery로 Ajax 구현하기</title>
+<script src="./js/jquery-3.6.1.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$('button').click(function(){
+		$('#container').load('resource.html');
+	});
+});
+</script>
+
+</head>
+<body>
+
+	<h1>Ajax 관련 실습 진행 중</h1>
+
+	<button>서버로부터 데이터 가져오기</button>
+
+	<div id="container">서버로부터 데이터 가져오기 전</div>
+
+	<p>국회의원과 정부는 법률안을 제출할 수 있다. 국교는 인정되지 아니하며, 종교와 정치는 분리된다. 대통령의 임기연장
+		또는 중임변경을 위한 헌법개정은 그 헌법개정 제안 당시의 대통령에 대하여는 효력이 없다. 국가는 지역간의 균형있는 발전을
+		위하여 지역경제를 육성할 의무를 진다. 국회가 재적의원 과반수의 찬성으로 계엄의 해제를 요구한 때에는 대통령은 이를 해제하여야
+		한다. 일반사면을 명하려면 국회의 동의를 얻어야 한다. 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. 국가는
+		농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+</body>
+</html>
