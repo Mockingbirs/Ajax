@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax 요청 직접 제어하기-$.ajax()</title>
+
+<style type="text/css">
+div {
+	width: 200px;
+	height: 80px;
+	margin: 3px;
+	float: left;
+}
+</style>
+
+<script src="./js/jquery-3.6.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//$(document).ready(function(){});
+	$(function() {
+		$('#menu1').click(function() {
+			$.ajax({
+				url : 'menu.html', //객체구분은 :(콜론)으로 한다.
+				dataType : 'html',
+				success : function(data){
+					$('#message1').html(data);
+				}
+			});
+			return false; //false 지정 시 부모에게 영향을 주지 않고 지정 엘리멘탈에만 영향을 준다.
+		});
+
+		$('#menu2').click(function() {
+			$.ajax({
+				url : 'menu.html', 
+				dataType : 'html',
+				success : function(data){
+					$('#message2').html($(data).find('li'));
+				}
+			});
+			return false;
+		});
+	});
+</script>
+
+</head>
+<body>
+
+	<div>
+		<a href="#" id="menu1">메뉴 보기1</a>
+		<p></p>
+		<span id="message1"></span>
+	</div>
+	<div>
+		<a href="#" id="menu2">메뉴 보기2</a>
+		<p></p>
+		<span id="message2"></span>
+	</div>
+
+</body>
+</html>

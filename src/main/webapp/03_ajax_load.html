@@ -18,6 +18,7 @@ div {
 <script type="text/javascript">
 $(function(){
 	$('#menu1').click(function(){
+		//$('#message1').load('menu.html .m1, .m2');
 		$('#message1').load('menu.html');
 		return false;
 	});
@@ -26,7 +27,7 @@ $(function(){
 
 $(function(){
 	$('#menu2').click(function(){
-		$('#message2').load('menu.html #2');
+		$('#message2').load('menu.html .m2');
 		return false;
 	});
 });
